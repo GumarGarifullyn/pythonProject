@@ -6,6 +6,7 @@
 
 
 lst1 = [1, 1, 2, 0, -1, 3, 4, 4]
+print(set(lst1))
 print(len(set(lst1)))
 
 
