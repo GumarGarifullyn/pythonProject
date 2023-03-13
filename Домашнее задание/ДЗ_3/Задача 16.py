@@ -14,3 +14,4 @@ for elem in my_list:
     if elem == num:
         count += 1
 print(count)
+print(my_list.count(num))

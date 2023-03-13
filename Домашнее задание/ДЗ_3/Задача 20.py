@@ -27,14 +27,11 @@ my_dict = {1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е
            8: ['J', 'X', 'Ш', 'Э', 'Ю'],
            10: ['Q', 'Z', 'Ф', 'Щ', 'Ъ']}
 word_user = str.upper(input('Введите слово: '))
-
-new_list = list(word_user)
-count = 0
-for index in range(len(new_list)):
-    for item in my_dict[0]:
-        if new_list[index] = item:
-            count +=
-
+new_list = tuple(word_user)
 print(new_list)
-
-print(word_user)
+count = 0
+for el in new_list:
+    for key, value in my_dict.items():
+        if el in value:
+            count += key
+print(count)
