@@ -22,3 +22,15 @@ for elem in my_list:
             count += 1
 print(my_list)
 
+my_dict = {}
+# for el in my_str:
+#     my_dict[el] = my_dict.get(el, 0) + 1
+#     if my_dict[el] == 1:
+#         print(el, end=', ')
+#     else:
+#         print(f'{el}_{my_dict[el] - 1}', end=', ')
+
+for i in my_list:
+    my_dict[i] = my_dict.get(i, 0) + 1
+    print(i if my_dict.get(i) == 1 else f'{i}_{my_dict.get(i) - 1}', end=' ')
+print('\n' + f'{my_dict}')
