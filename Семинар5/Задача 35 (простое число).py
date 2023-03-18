@@ -5,11 +5,11 @@
 # имеет 2 делителя: 1 и n(само число)
 # Input: 5
 # Output: yes
-#
+# #
 # def prostoe_chislo (num: int):
 #     if not num % 2 and num != 2:
-#         for i in range(3, 2):
-#             if not num % 2:
+#         for i in range(3, num//2, 2):
+#             if not num % i:
 #                 return print(f"{chislo} не является простым числом")
 #     return print(f'{chislo} является простым числом')
 #
@@ -17,11 +17,15 @@
 # print(prostoe_chislo(chislo))
 
 a = int(input("Введите число: "))
-k = 0
-for i in range(2, a // 2+1):
-    if (a % i == 0):
-        k = k+1
-if (k <= 0):
-    print("Число простое")
-else:
-    print("Число не является простым")
+
+def prostoe_chislo(num):
+    k = 0
+    for i in range(2, num // 2+1):
+        if (a % i == 0):
+          k = k+1
+    if (k <= 0):
+        print("Число простое")
+    else:
+        print("Число не является простым")
+
+prostoe_chislo(a)
