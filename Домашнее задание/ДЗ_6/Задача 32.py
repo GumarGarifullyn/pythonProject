@@ -15,4 +15,7 @@ index_list = []
 for i in range(len(my_list)):
     if conditions_list[0] <= my_list[i] <= conditions_list[1]:
         index_list.append(i)
-print(index_list)
+if len(index_list) > 0:
+    print(index_list)
+else:
+    print("Нет чисел, удовлетворяющих Вашему условию")
