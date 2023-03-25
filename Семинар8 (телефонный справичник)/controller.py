@@ -16,10 +16,9 @@ def start():
             case 3:
                 view.show_contact(pb, "Телефонная книга не открыта или пуста!")
             case 4:
-                if view.show_contact(pb, 'Телефонная книга пуста или не открыта'):
-                    contact = view.add_contact()
-                    model.add_contact(contact)
-                    view.show_message('Контакт добавлен, не забудь его сохранить!')
+                contact = view.add_contact()
+                model.add_contact(contact)
+                view.show_message('Контакт добавлен, не забудь его сохранить!')
             case 5:
                 if view.show_contact(pb, 'Телефонная книга пуста или не открыта'):
                     index = view.input_index('Введите номер изменяемого контакта: ')
@@ -31,5 +30,8 @@ def start():
                 result = model.find_contact(search)
                 view.show_contact(result, 'Контакт не найден')
             case 7:
+                index = view.input_index('Введите номер контакта, который нужно удалить: ')
+                model.delete_contact(index)
+            case 8:
                 view.show_message('Пока')
                 return
