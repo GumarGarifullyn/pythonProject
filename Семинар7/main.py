@@ -1,5 +1,5 @@
 def open_fail():
-    path = r'D:\PyCharm\text.txt'
+    path = r'data.txt'
     file = open(path, 'r', encoding="UTF-8")
     list_num = file.readlines()
     print(list_num)
@@ -12,7 +12,7 @@ def open_fail():
         print(temp[0])
         print(lib_num)
         return lib_num
-lib_num = open_fail()
+open_fail()
 name = input('Введите имя: ')
 print(lib_num.get(name, 'нет такого контакта'))
 if lib_num.get(name) == None:

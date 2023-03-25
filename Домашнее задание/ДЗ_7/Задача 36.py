@@ -11,18 +11,25 @@
 #  4 8 12 16 20 24
 #  5 10 15 20 25 30
 #  6 12 18 24 30 36
-# list_1 = [1,2,3,4,5,6]
-# list_2 = [1,2,3,4,5,6]
+# list_1 = [1,2,3,4,5,6,7,8,9,10]
+# list_2 = [1,2,3,4,5,6,7,8,9,10]
+# new_list = []
+# new_str = ''
 # for el in list_1:
 #     print()
 #     for elem in list_2:
-#         print(el*elem, end=" ")
+#         a = el*elem
+#         print(f"{a:=<5}", end=" ")
+#
+# print()
+# print(new_list)
+# print(new_str)
 #
 def print_operation_table(operation, num_rows=6, num_columns=6):
         for el in range(1, num_rows +1):
             print()
             for elem in range(1, num_columns+1):
                 operation(el, elem)
-                print(operation(el, elem),end=" ")
+                print(operation(el, elem), end=" ")
 
 print_operation_table(lambda x, y: x*y,6,6)
