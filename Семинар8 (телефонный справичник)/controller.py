@@ -27,10 +27,9 @@ def start():
                     model.change_contact(contact, index)
                     view.show_message('Контакт изменен, не забудь его сохранить')
             case 6:
-                if view.show_contact(pb, 'Телефонная книга пуста или не открыта'):
-                    search = view.input_search('Введите искомый элемент ')
-                    result = model.find_contact(search)
-                    view.show_contact(result, 'Контакт не найден')
+                search = view.input_search('Введите искомый элемент ')
+                result = model.find_contact(search)
+                view.show_contact(result, 'Контакт не найден')
             case 7:
                 view.show_message('Пока')
                 return

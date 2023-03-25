@@ -32,6 +32,6 @@ def find_contact(search: str) -> list[dict]:
     result = []
     for contact in phone_book:
         for field in contact.values():
-            if search in field:
+            if search.lower() in field.lower():
                 result.append(contact)
     return result
